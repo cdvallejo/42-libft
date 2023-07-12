@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_long_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cvallejo <cvallejo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cvallejo <cvallejo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:13:54 by cvallejo          #+#    #+#             */
-/*   Updated: 2022/09/05 12:29:15 by cvallejo         ###   ########.fr       */
+/*   Updated: 2023/03/24 17:16:59 by cvallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ static int	ft_checkspaces(char *str)
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+long int	ft_long_atoi(const char *str)
 {
-	int	i;
-	int	aux;
-	int	result;
+	int		i;
+	long	aux;
+	long	result;
 
 	i = 0;
 	aux = 1;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cvallejo <cvallejo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cvallejo <cvallejo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 15:27:54 by cvallejo          #+#    #+#             */
-/*   Updated: 2022/05/04 17:07:46 by cvallejo         ###   ########.fr       */
+/*   Updated: 2023/03/24 17:16:22 by cvallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,19 @@ static int	ft_getsubstr(char const *s, char c, size_t start)
 	return (count);
 }
 
+void	free_malloc(char **function)
+{
+	int	i;
+
+	i = 0;
+	while (function[i])
+	{
+		free(function[i]);
+		i++;
+	}
+	free(function);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**strcad;
@@ -65,12 +78,13 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c)
 		{
 			strcad[count_split] = ft_substr(s, i, ft_getsubstr(s, c, i));
+			if (!strcad[count_split])
+				return (free_malloc(strcad), NULL);
 			count_split++;
 			i = i + ft_getsubstr(s, c, i);
 		}
 		else
 			i++;
 	}
-	strcad[count_split] = NULL;
-	return (strcad);
+	return (strcad[count_split] = NULL, strcad);
 }
