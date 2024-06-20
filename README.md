@@ -6,13 +6,6 @@
 	<b><i>The first and necessary project, your best friend</i></b><br>
 </p>
 
-<p align="center">
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Falitomal/Libft-42?color=lightblue" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/Falitomal/Libft-42?color=yellow" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Falitomal/Libft-42?color=blue" />
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Falitomal/Libft-42?color=green" />
-</p>
-
 My library prepared for get next line and printf, with which I have obtained the 125 points.
 
 This is a essential cursus library, with a focus on safety and some extra functions that do stuff like return the absolute value, return the power of an int, return whether a string will overflow an int if passed to atoi and free a pointer and point it to NULL.
